@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+img{
+	box-shadow: 2px 2px 2px 0 #02010a;
+}
+
+.contenido{
+width: 100%;
+max-width: 900px;
+margin: auto;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+body{
+	font-family: Dancing Script;
+	background: #02010a;
+
+}
+
+@-webkit-keyframes slide{
+	0%{
+		
+		margin-top: 150%;
+	}
+
+	60%{
+		
+		margin-top: -5%;
+	}
+
+	100%{
+		margin-top: 0%;
+	}
+}
+
+
+header {
+	background: #5b7989;
+	width: 100%;
+	height: 140px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	flex-direction:row;
+	flex-wrap: wrap;
+	border-radius: 10px 10px 0 0;
+
+	/*Animación de header*/
+	animation: slide 1s;
+
+
+}
+
+header h1 {
+	color: white;
+	text-shadow: 2px 2px #02010a;
+}
+
+
+header nav{
+	width: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	}
+
+header nav a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	}
+
+
+.seccion1 {
+	width: 100%;
+	padding: 20px;
+	background: #82c3a6;
+	align-items: center;
+	justify-content:space-around;
+}
+
+.seccion1 img{
+	width: 100%;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+#seccion2 {
+	width: 100%;
+	padding: 30px;
+	background: #d5c75f;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	}
+
+div #adaptative1 #adaptative2{
+	margin: 0;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+}
+
+div #adaptative1 img{
+	width: 100%;
+	border: 1px solid black;
+	}
+
+div #adaptative2 img{
+	width: 100%;
+	border: 1px solid black;
+	}
+
+#adaptative1 img:hover{
+-webkit-transform:rotate(10deg);
+-moz-transform:rotate(10deg);
+transform: rotate(10deg);
+box-shadow: 3px 5px 10px 0 #82c3a6;
+border-image: 2px;
+}
+
+#adaptative2 img:hover{
+-webkit-transform:translate(20px, -5px);
+-moz-transform: translate(20px, -5px);
+transform: translate(20px, -5px);
+box-shadow: 2px 3px 10px 0 #82c3a6;
+}
+
+
+footer{
+	background: #C6d5c5;
+	width: 100%;
+	padding: 0px;
+	border-radius: 0 0 10px 10px;
+	box-sizing: border-box;
+
+	}
+
+#section-footer {
+	margin:5px;
+	padding: 0;
+	background: #C6d5c5;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.columna{
+	padding: 5px;
+}
+
+.columna div {
+	width: 50%;
+	flex-direction: column;
+	align-items: center;
+	}
+
+.columna1 div{
+	width: 50%;
+	flex-direction: column;
+
+}
+
+.columna2 div{
+	width: 50%;
+	flex-direction: column;
+
+}
+
+.columna3 div{
+	width: 50%;
+	flex-direction: column;
+	}
+
+
+/*CSS3 paginas Paisajes y Retratos*/
+
+	.galeria{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		background: #d5c75f;
+	}
+
+	.paisajes{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 20px;
+		justify-content: space-between;
+	}
+
+	.paisajes img{
+		display: flex;
+		width: 30.3%;
+		
+		box-shadow: 2px 2px 2px 0 #02010a;
+}
+
+/*Aplicacion de Filtros*/
+
+	#imagen1{
+			filter: blur(10px);
+		}
+
+	#imagen2, #imagen4, #imagen6{
+			filter: grayscale(100%);
+		}
+
+	#imagen3{
+			filter: sepia(90%);
+		}
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 900px){
+
+.contenido{
+	width: 98%;
+	margin: 0 auto;
+	justify-content: center;
+	}
+}
+
+
+@media screen and (max-width: 900px){
+
+	.contenido {
+		width: 100%;
+		margin: 0 margin;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	header nav{
+		width: 100%;
+		justify-content: center;
+	}
+
+	header h1	{
+		width: 100%;
+		text-align: center;
+	}
+
+	.columna, .columna1, .columna2, .columna3{
+		float:left;
+		width: 100%;
+		justify-content: center;
+		padding: 10px;
+
+	}
+
+@media screen and (max-width: 900px){
+	.galeria{
+		width: 100%;
+		display: flex;
+		}
+
+	.paisajes{
+		display: inline-block;
+		padding: 5px 20px 10px 20px;
+		}
+	
+	.paisajes img{
+		width: 90%;
+		margin: 20px;
+		}
+
+	}
+	
+
+	
